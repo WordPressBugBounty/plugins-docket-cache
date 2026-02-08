@@ -4,7 +4,7 @@ Tags: object cache, OPcache, cache, database, performance
 Requires at least: 5.4
 Tested up to: 6.9
 Requires PHP: 7.2.5
-Stable tag: 24.07.06
+Stable tag: 24.07.07
 License: MIT
 License URI: https://github.com/nawawi/docket-cache/blob/master/LICENSE.txt
 Donate link: https://docketcache.com/sponsorship/
