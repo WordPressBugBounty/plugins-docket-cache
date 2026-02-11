@@ -173,6 +173,9 @@ Yes, you can. It can boost more your WordPress performance since there is no net
 Please do manually remove wp-content/object-cache.php and wp-content/cache/docket-cache if an error occurs during updates. Thanks.
 
 == Changelog ==
+= v24.07.07 =
+- Fixed: _load_textdomain_just_in_time was called incorrectly on WordPress 6.7+.
+
 = v24.07.06 =
 - Fixed: MoCache double-applying load_textdomain_mofile filter.
 
