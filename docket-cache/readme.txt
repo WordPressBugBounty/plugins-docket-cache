@@ -4,7 +4,7 @@ Tags: object cache, OPcache, cache, database, performance
 Requires at least: 5.4
 Tested up to: 6.9
 Requires PHP: 7.2.5
-Stable tag: 24.07.07
+Stable tag: 26.04.03
 License: MIT
 License URI: https://github.com/nawawi/docket-cache/blob/master/LICENSE.txt
 Donate link: https://docketcache.com/sponsorship/
@@ -173,6 +173,24 @@ Yes, you can. It can boost more your WordPress performance since there is no net
 Please do manually remove wp-content/object-cache.php and wp-content/cache/docket-cache if an error occurs during updates. Thanks.
 
 == Changelog ==
+= v26.04.03 =
+- Added: CliOpcache — Invalidate web-server OPcache from WP-CLI via REST endpoint.
+- Added: DOCKET_CACHE_WPCLI_OPCACHE constant to enable/disable CLI OPcache invalidation.
+- Added: DOCKET_CACHE_CONFIGACTION constant to enable/disable Export/Import settings feature.
+- Added: Export/Import settings feature for configuration backup and restore.
+- Fixed: CliOpcache -> Path traversal protection using realpath() validation.
+- Fixed: CliOpcache -> Bulk flush suppression to avoid excessive HTTP requests during full cache flush.
+- Fixed: CliOpcache -> Shared secret initialised during REST route registration.
+- Fixed: ReqAction -> Flush Object Cache causing 502 nginx error by deferring flush after response.
+- Fixed: Plugin::get_opcache_status() -> Filter scripts by ABSPATH to prevent counting other sites on shared hosting.
+- Fixed: Plugin::get_opcache_status() -> Removed unnecessary is_file() stale check on every cached script.
+- Improved: Filesystem::unlink() -> Notify web-server OPcache on individual cache file deletion.
+- Improved: Filesystem::cachedir_flush() -> Utilise Crawler class for internal HTTP requests.
+- Improved: Plugin::get_opcache_status() -> Skip building scripts array for overview page, cap at 50000 for OPcacheView.
+- Improved: Plugin::get_opcache_status() -> Timeout guard for file cache scan on shared hosting.
+- Improved: OPcacheView -> Removed "All Items" option, replaced with 50000 items cap.
+- Improved: OPcacheView::get_status() -> Cache result to prevent double scan per page load.
+
 = v24.07.07 =
 - Fixed: _load_textdomain_just_in_time was called incorrectly on WordPress 6.7+.
 

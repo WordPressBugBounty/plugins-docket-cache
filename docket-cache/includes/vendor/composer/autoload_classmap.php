@@ -11,6 +11,7 @@ return array(
     'Nawawi\\DocketCache\\Becache' => $baseDir . '/includes/src/Becache.php',
     'Nawawi\\DocketCache\\Bepart' => $baseDir . '/includes/src/Bepart.php',
     'Nawawi\\DocketCache\\Canopt' => $baseDir . '/includes/src/Canopt.php',
+    'Nawawi\\DocketCache\\CliOpcache' => $baseDir . '/includes/src/CliOpcache.php',
     'Nawawi\\DocketCache\\Command' => $baseDir . '/includes/src/Command.php',
     'Nawawi\\DocketCache\\Constans' => $baseDir . '/includes/src/Constans.php',
     'Nawawi\\DocketCache\\Crawler' => $baseDir . '/includes/src/Crawler.php',
